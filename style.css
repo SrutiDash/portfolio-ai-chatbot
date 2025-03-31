@@ -273,3 +273,63 @@ h1 {
 		transform: translateX(-50%);
 	}
 }
+
+h2 {
+	font-size:64px;
+	line-height:1;
+	margin-bottom:10px;
+	text-align:center;
+	color: var(--base-800);
+	padding:30px;
+	small {
+		display:block;
+		font-weight:100;
+		font-size:0.5em;
+		color:var(--base);
+	}
+	@media (max-width:1024px){
+		font-size:48px;
+	}
+}
+
+h3 {
+	font-size:32px;
+	font-weight:600;
+	line-height:1;
+	margin-bottom:20px;
+	color: var(--base-800);
+}
+
+.skills {
+	.holder-blue {
+		background-color: var(--blue-100);
+		border-radius:30px;
+		padding:30px;
+		display:flex;
+		@media(max-width:1024px){
+			flex-direction:column;
+		}
+		.left-column {
+			flex:1;
+			ul {
+				list-style-type: none;
+				gap:10px;
+				margin-right:100px;
+				margin-bottom:20px;
+				li {
+					display:inline-block;
+					background-color: var(--blue-400);
+					padding:10px 20px;
+					border-radius:10px;
+					margin-bottom:5px;
+				}
+			}
+		}
+		.right-column {
+			flex:1;
+			p {
+				margin-bottom:20px;
+			}
+		}
+	}
+}
