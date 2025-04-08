@@ -14,9 +14,16 @@
 <body>
     <header>
         <a href="#" class="logo-holder">
-            <div class="logo">L</div>
+            <!-- <div class="logo">L</div> -->
+            <div class="logo">
+                <img src="./imgs/favicon.jpeg" alt="Logo" class="logo-img" />
+            </div>
             <div class="logo-text">Portfolio Website</div>
         </a>
+        <label class="theme-toggle">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider"></span>
+        </label>          
         <nav>
             <ul id="menu">
                <li>
@@ -39,6 +46,22 @@
             </a>
         </nav>
     </header>
+    <!-- <header>
+        <a href="#" class="logo-holder">
+          <div class="logo">S</div>
+          <div class="logo-text">Portfolio Website</div>
+        </div>
+        </a>
+        <nav>
+          <div class="mobile-toggle" onclick="toggleMobileMenu()">☰</div> 
+          <ul id="menu"> 
+            <li><a href="#">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="mailto:srutidash1203@gmail.com" class="button">Contact Me</a></li>
+          </ul>
+        </nav>
+      </header>       -->
     <main>
         <section class="hero container">
             <div class="hero-blue">
@@ -231,8 +254,8 @@
 				<a href="https://www.vitaely.me/srutidash" class="bento-item">
 					<img src="./imgs/bento-7.png" alt="portfolio" width="100%" />
 				</a>
-				<a href="#" class="bento-item">
-					<img src="./imgs/bento-2.jpg" alt="Churhview" width="100%" />
+				<a href="https://venerable-pie-32c17c.netlify.app/" class="bento-item">
+					<img src="./imgs/bento-2.png" alt="Churhview" width="100%" />
 				</a>
 				<a href="https://digital-clock-one-liard.vercel.app/" class="bento-item">
 					<img src="./imgs/bento-3.png" alt="Harley" width="100%" />
@@ -247,7 +270,7 @@
 					<img src="./imgs/bento-1.png" alt="Netflix" width="100%" />
 				</a>
 			</div>
-            <section class="chatbot container">
+            <!-- <section class="chatbot container">
                 <h2>
                     <small>
                         Talk to me
@@ -256,12 +279,12 @@
                 </h2>
                 <div class="chatbot-blue">
                     <div class="chat-info">
-                        <h3>Azure AI Chatbot</h3>
+                        <h3>AI Chatbot</h3>
                         <p>I've put together a chatbot here which knows all my skills, work experience and has a copy of my CV/Resume. You can use it to ask questions about me to get a better idea of who I am and what I've done.</p>
                         <p>You can also download my resume here if you want to take a look at it.  I'm currently looking for new opportunities so if you have a project you think I'd be a good fit for, please get in touch!</p>
                         <a href="./srutidash.pdf" class="button black">Download Resume</a>
-                    </div>
-                    <div class="chat-box">
+                    </div> -->
+                    <!-- <div class="chat-box">
                         <div class="scroll-area">
                             <ul id="chat-log">
                                 <li>
@@ -282,9 +305,63 @@
                             <input type="text" placeholder="Hey Sruti, what skills are you best at?">
                             <button class="button black">Send</button>
                         </div>
-                    </div>
+                    </div> -->
+                    <!-- <div id="chat-bot">
+                        <div id="chat-window"></div>
+                        <input type="text" id="user-input" placeholder="Ask me anything..." />
+                        <button onclick="sendMessage()">Send</button>
+                    </div>                      
                 </div>
-		</section>
+		</section> -->
     </main>
+    <script>
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="Ti-SYcq1HC7pe11g8Mq22";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+    <div id="custom-chat-button" onclick="document.querySelector('iframe').contentWindow.postMessage({event:'open'}, '*')">
+        💬 Need Help? Chat with me!
+      </div>
+      
+      <style>
+      #custom-chat-button {
+        position: fixed;
+        bottom: 100px; /* raise it above default chatbot icon */
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 12px 16px;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 9999;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #custom-chat-button:hover {
+        background-color: #0056b3;
+      }
+      </style>
+      <script>
+        const switchToggle = document.getElementById("theme-switch");
+      
+        // Toggle dark mode class
+        switchToggle.addEventListener("change", function () {
+          document.body.classList.toggle("dark-mode");
+      
+          // Save preference
+          if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+        });
+      
+        // Load theme on page load
+        window.addEventListener("DOMContentLoaded", () => {
+          const storedTheme = localStorage.getItem("theme");
+          if (storedTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            switchToggle.checked = true;
+          }
+        });
+      </script>      
 </body>
 </html>
