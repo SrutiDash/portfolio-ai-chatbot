@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Web Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/jpg" href="./imgs/favicon.jpeg">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-holder">
+            <!-- <div class="logo">L</div> -->
+            <div class="logo">
+                <img src="./imgs/favicon.jpeg" alt="Logo" class="logo-img" />
+            </div>
+            <div class="logo-text">Portfolio Website</div>
+        </a>
+        <label class="theme-toggle">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider"></span>
+        </label>          
+        <nav>
+            <ul id="menu">
+               <li>
+                   <a href="#">Home</a>
+               </li>
+               <li>
+                   <a href="#skills">Skills</a>
+               </li>
+               <li>
+                   <a href="#projects">Projects</a>
+               </li>
+               <li>
+                <a href="mailto:srutidash1203@gmail.com" class="button">Contact Me</a>
+               </li>
+            </ul>
+            <a hred="#" class="mobile-toggle" onclick="toggleMobileMenu();">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+                </svg>  
+            </a>
+        </nav>
+    </header>
+    <!-- <header>
+        <a href="#" class="logo-holder">
+          <div class="logo">S</div>
+          <div class="logo-text">Portfolio Website</div>
+        </div>
+        </a>
+        <nav>
+          <div class="mobile-toggle" onclick="toggleMobileMenu()">☰</div> 
+          <ul id="menu"> 
+            <li><a href="#">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="mailto:srutidash1203@gmail.com" class="button">Contact Me</a></li>
+          </ul>
+        </nav>
+      </header>       -->
+    <main>
+        <section class="hero container">
+            <div class="hero-blue">
+                <div>
+                    <h1>
+                        <small>
+                            Hi I'm
+                        </small>
+                            Sruti Dash
+                    </h1>
+                    <p>
+                        A Frontend Developer with a knack for crafting seamless and high-performance web applications. 
+                        <span>
+                            With 1.9+ years of experience in ReactJs, Angular, JavaScript, UI/UX and SQL, I focus on building interactive, scalable, and visually appealing interfaces. I'm currently diving into Data Analytics to broaden my skill set and stay ahead in the tech space.
+                        </span>
+                    </p>                                       
+                    <div class="call-to-action">
+                        <a href="./srutidash.pdf" class="button black">
+                            View Resume
+                        </a>
+                        <a href="mailto:srutidash1203@gmail.com" class="button white">
+                            Contact Me
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/SrutiDash">
+                            <img src="./imgs/github.png" alt="GitHub" width="48">
+                        </a>
+                        <a href="https://www.linkedin.com/in/sruti-dash/">
+                            <img src="./imgs/linkedin.png" alt="LinkedIn" width="48">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-yellow">
+                <img src="./imgs/favicon.jpeg" alt="Sruti Dash" width="100%">
+            </div>
+        </section>
+        <section class="logos container">
+            <div class="marquee">
+                <div class="track">
+                    <img src="imgs/html.png" alt="HTML" width="128">
+                    <img src="imgs/css.png" alt="CSS" width="128">
+                    <img src="imgs/javascript.png" alt="JS" width="128">
+                    <img src="imgs/sass.png" alt="Sass" width="128">
+                    <img src="imgs/react.png" alt="React" width="128">
+                    <img src="imgs/nextjs.png" alt="Next JS" width="128">
+                    <img src="imgs/azure.png" alt="Azure" width="128">
+                    <img src="imgs/vscode.png" alt="VS Code" width="128">
+                    <img src="./imgs/python.png" alt="Python" width="128"/>
+                    <img src="imgs/html.png" alt="HTML" width="128">
+                    <img src="imgs/css.png" alt="CSS" width="128">
+                    <img src="imgs/javascript.png" alt="JS" width="128">
+                    <img src="imgs/sass.png" alt="Sass" width="128">
+                    <img src="imgs/react.png" alt="React" width="128">
+                    <img src="imgs/nextjs.png" alt="Next JS" width="128">
+                    <img src="imgs/azure.png" alt="Azure" width="128">
+                    <img src="imgs/vscode.png" alt="VS Code" width="128">
+                    <img src="./imgs/python.png" alt="Python" width="128"/>
+                </div>
+            </div>
+        </section>
+        <section id ="skills" class="skills container">
+            <h2>
+                <small>About me</small>
+                Skills
+            </h2>
+            <div class="holder-blue">
+                <div class="left-column">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>React</li>
+                        <li>Angular</li>
+                        <li>Vue</li>
+                        <li>TailwindCSS</li>
+                        <li>UI/UX</li>
+                        <li>Figma</li>
+                    </ul>
+
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>Java</li>
+                        <li>SpringBoot</li>
+                        <li>Microservices</li>
+                        <li>Linux</li>
+                    </ul>
+
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>Oracle</li>
+                    </ul>
+
+                    <h3>APIs & Testing</h3>
+                    <ul>
+                        <li>REST APIs</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Firebase</li>
+                        <li>ETL</li>
+                        <li>Testing</li>
+                        <li>Appium</li>
+                        <li>Mobile Testing</li>
+                        <li>Android Studio</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <h3>A bit about myself</h3>
+                    <p>Hello, I’m Sruti! A frontend developer with expertise in Angular, React, JavaScript, and UI/UX design, dedicated to building seamless and engaging web applications.</p>
+                    <p>With experience in full-stack development, including Java, Node.js, PostgreSQL, and API integrations, I bring a well-rounded approach to crafting efficient and user-centric solutions. However, my true passion lies in designing intuitive interfaces that enhance user experiences.</p>
+                    <p>
+                        Currently working on:
+                    </p>
+                    <p>   
+                        A chatbot powered by Azure AI to assist with web development queries.
+                    </p>    
+                        A React and Next.js portfolio project focused on creating a visually appealing and highly functional design.
+                    </p> 
+                    <p>    
+                        I’m also expanding my skills in Data Analytics, continuously exploring new technologies to innovate and push the boundaries of web development.
+                    </p>    
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="work-experience container">
+			<h2>
+				<small>Recent</small>
+				Work Experience
+			</h2>
+			<div class="jobs">
+				<article>
+					<figure>
+						<div>
+							<img src="./imgs/workplace.jpg" alt="Workplace 1 - YouTube Creator" width="100%" />
+							<figcaption>
+								Workplace
+							</figcaption>
+						</div>
+					</figure>
+					<h3>Software Developer</h3>
+					<div>Dec 2023 - current</div>
+                    <p>
+                        I am a <strong>Product Development Engineer</strong> at <strong>Mahindra Comviva</strong> (December 2023 - Present) in Bengaluru, Karnataka, specializing in <strong>Angular</strong> and <strong>REST APIs</strong> to build scalable and high-performance web applications.
+                    </p>
+                    <p>
+                        I develop reusable UI components, optimize API efficiency, and implement <strong>lazy loading</strong>, <strong>caching</strong>, and <strong>state management</strong> to enhance performance and user experience. Collaborating with backend teams, I ensure faster API responses and seamless data updates.
+                    </p>
+                    <p>
+                        My work includes optimizing <strong>ETL pipelines</strong>, reducing data sync time by 30%, and improving <strong>PostgreSQL</strong> database performance through efficient indexing. I have also refactored the <strong>Angular dashboard</strong>, cutting page load times by 40%.
+                    </p>
+                    <p>
+                        With expertise in <strong>SQL, PostgreSQL, MySQL, Oracle</strong>, and <strong>DBMS</strong>, I am proficient in version control (<strong>Git, GitHub</strong>) and UI/UX tools (<strong>VS Code, Figma</strong>). Additionally, I have experience in <strong>Linux environments</strong>, including shell scripting and deployment automation.
+                    </p>
+				</article>
+                <article>
+					<figure>
+						<div>
+							<img src="./imgs/workplace2.jpg" alt="Workplace 1 - YouTube Creator" width="100%" />
+							<figcaption>
+								Workplace
+							</figcaption>
+						</div>
+					</figure>
+					<h3>Engineer Trainee</h3>
+					<div>July 2023 - Nov 2023</div>
+                    <p>Extensive experience in <strong>mobile app testing</strong>, having designed and executed 100+ automated test cases using <strong>Appium</strong> and <strong>Android Studio</strong> to ensure application stability, functionality, and performance.</p>
+                    <p>Strong knowledge of test scripting, debugging, and automation best practices.</p>
+                    <p>Skilled in debugging, log analysis, and performance monitoring, ensuring seamless mobile app experiences across multiple devices and operating systems.</p>
+                    <p>Hands-on experience in <strong>Spring Boot</strong> for backend development, creating RESTful APIs and microservices. Strong understanding of state management, component lifecycle, and <strong>UI/UX</strong> best practices.</p>
+                    <p>Proficient in <strong>ReactJS, Angular, Typescript</strong> and modern frontend frameworks to build interactive and scalable UI components.</p>
+                </article>    
+            </div>
+        </section>
+        <section id="projects" class="bento container">
+			<h2>
+				<small>
+					Previous
+				</small>
+				Completed Projects
+			</h2>
+			<div class="bento-grid">
+				<a href="https://www.vitaely.me/srutidash" class="bento-item">
+					<img src="./imgs/bento-7.png" alt="portfolio" width="100%" />
+				</a>
+				<a href="https://venerable-pie-32c17c.netlify.app/" class="bento-item">
+					<img src="./imgs/bento-2.png" alt="Churhview" width="100%" />
+				</a>
+				<a href="https://digital-clock-one-liard.vercel.app/" class="bento-item">
+					<img src="./imgs/bento-3.png" alt="Harley" width="100%" />
+				</a>
+				<a href="https://spectacular-squirrel-36c036.netlify.app/" class="bento-item">
+					<img src="./imgs/bento-5.png" alt="Bunbury" width="100%" />
+				</a>
+				<a href="https://psd-2-html-pink.vercel.app/" class="bento-item">
+					<img src="./imgs/bento-6.png" alt="Running" width="100%" />
+				</a>
+				<a href="https://famous-quokka-576a88.netlify.app/" class="bento-item">
+					<img src="./imgs/bento-1.png" alt="Netflix" width="100%" />
+				</a>
+			</div>
+            <!-- <section class="chatbot container">
+                <h2>
+                    <small>
+                        Talk to me
+                    </small>
+                    Chatbot
+                </h2>
+                <div class="chatbot-blue">
+                    <div class="chat-info">
+                        <h3>AI Chatbot</h3>
+                        <p>I've put together a chatbot here which knows all my skills, work experience and has a copy of my CV/Resume. You can use it to ask questions about me to get a better idea of who I am and what I've done.</p>
+                        <p>You can also download my resume here if you want to take a look at it.  I'm currently looking for new opportunities so if you have a project you think I'd be a good fit for, please get in touch!</p>
+                        <a href="./srutidash.pdf" class="button black">Download Resume</a>
+                    </div> -->
+                    <!-- <div class="chat-box">
+                        <div class="scroll-area">
+                            <ul id="chat-log">
+                                <li>
+                                    <span class="avatar bot">AI</span>
+                                    <div class="message">
+                                        Hi, I'm a friendly chatbot that lets you interactive with this portfolio and CV. How can I help?
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="avatar user">User</span>
+                                    <div class="message">
+                                        I have a question to ask you about this resume
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="chat-message">
+                            <input type="text" placeholder="Hey Sruti, what skills are you best at?">
+                            <button class="button black">Send</button>
+                        </div>
+                    </div> -->
+                    <!-- <div id="chat-bot">
+                        <div id="chat-window"></div>
+                        <input type="text" id="user-input" placeholder="Ask me anything..." />
+                        <button onclick="sendMessage()">Send</button>
+                    </div>                      
+                </div>
+		</section> -->
+    </main>
+    <script>
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="Ti-SYcq1HC7pe11g8Mq22";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+    <div id="custom-chat-button" onclick="document.querySelector('iframe').contentWindow.postMessage({event:'open'}, '*')">
+        💬 Need Help? Chat with me!
+      </div>
+      
+      <style>
+      #custom-chat-button {
+        position: fixed;
+        bottom: 100px; /* raise it above default chatbot icon */
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 12px 16px;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 9999;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #custom-chat-button:hover {
+        background-color: #0056b3;
+      }
+      </style>
+      <script>
+        const switchToggle = document.getElementById("theme-switch");
+      
+        // Toggle dark mode class
+        switchToggle.addEventListener("change", function () {
+          document.body.classList.toggle("dark-mode");
+      
+          // Save preference
+          if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+        });
+      
+        // Load theme on page load
+        window.addEventListener("DOMContentLoaded", () => {
+          const storedTheme = localStorage.getItem("theme");
+          if (storedTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            switchToggle.checked = true;
+          }
+        });
+      </script>      
+</body>
+</html>
